@@ -32,7 +32,7 @@ func main() {
 
 func run() {
 	cfg := pixelgl.WindowConfig{
-		Title:  "Vídeo Capturado",
+		Title:  "gomirror",
 		Bounds: pixel.R(0, 0, 400, 855),
 		VSync:  true,
 	}
