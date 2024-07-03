@@ -113,34 +113,6 @@ func captureScreen() (image.Image, error) {
 	return img, nil
 }
 
-// func getWindowSize() (ScreenSize, error) {
-// 	cmd := exec.Command("adb", "shell", "wm", "size")
-// 	output, err := cmd.Output()
-// 	if err != nil {
-// 		return ScreenSize{}, err
-// 	}
-
-// 	strOutput := strings.TrimPrefix(string(output), "Physical size: ")
-// 	strOutput = strings.TrimSuffix(strOutput, "\n")
-
-// 	windowSize := strings.Split(strOutput, "x")
-
-// 	width, err := strconv.ParseUint(windowSize[0], 10, 16)
-// 	if err != nil {
-// 		return ScreenSize{}, err
-// 	}
-// 	height, err := strconv.ParseUint(windowSize[1], 10, 16)
-// 	if err != nil {
-// 		return ScreenSize{}, err
-// 	}
-
-// 	return ScreenSize{
-// 		Width:  uint16(width),
-// 		Height: uint16(height),
-// 	}, nil
-
-// }
-
 func convertToScreenCoordinates(clickX, clickY int, screenWidth, screenHeight uint16) (int, int) {
 	screenWidthFloat := float64(screenWidth)
 	screenHeightFloat := float64(screenHeight)
